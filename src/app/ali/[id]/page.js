@@ -17,10 +17,10 @@ const page = async (props) => {
 
 export default page;
 
-// export async function generateStaticParams() {
-//   let data = await fetch(`https://jsonplaceholder.typicode.com/todos`);
-//   data = await data.json();
-//   return data.map((user) => ({
-//     id: user.id.toString(),
-//   }));
-// }
+export async function generateStaticParams() {
+  let data = await fetch(`https://jsonplaceholder.typicode.com/todos`);
+  data = await data.json();
+  return data.map((user) => ({
+    id: user.id.toString(),
+  }));
+}
